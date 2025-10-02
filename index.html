@@ -62,50 +62,88 @@
         }
 
         /* Updated logo styles to accommodate image */
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-family: 'Cinzel', serif;
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--text);
-            text-decoration: none;
-            letter-spacing: 1px;
-            position: relative;
-            overflow: hidden;
-        }
+       /* Updated logo styles to accommodate image */
+/* Updated logo styles to accommodate image */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Reduced from 10px */
+    font-family: 'Cinzel', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
 
-        .logo-image {
-            width: 40px;
-            height: 40px;
-            object-fit: contain;
-            transition: transform 0.3s ease;
-        }
+.logo-image {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
 
-        .logo:hover .logo-image {
-            transform: rotate(15deg) scale(1.1);
-        }
+.logo:hover .logo-image {
+    transform: rotate(15deg) scale(1.1);
+}
 
-        .logo span {
-            color: var(--accent);
-        }
+.logo span {
+    color: var(--accent);
+}
 
-        .logo::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--accent);
-            transition: width 0.3s ease;
-        }
+.logo::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+}
 
-        .logo:hover::after {
-            width: 100%;
-        }
+.logo:hover::after {
+    width: 100%;
+}
 
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 24px;
+        gap: 6px; /* Further reduced for mobile */
+    }
+    
+    .logo-image {
+        width: 38px; /* Slightly larger for mobile */
+        height: 38px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo {
+        font-size: 22px;
+        gap: 5px; /* Minimal gap for very small screens */
+    }
+    
+    .logo-image {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+@media (max-width: 400px) {
+    .logo {
+        font-size: 20px;
+        gap: 2px; /* Minimal gap for smallest screens */
+    }
+    
+    .logo-image {
+        width: 34px;
+        height: 34px;
+    }
+}
         .search-bar {
             display: flex;
             width: 40%;
@@ -1657,8 +1695,8 @@
             }
             
             .logo-image {
-                width: 30px;
-                height: 30px;
+                width: 40px;
+                height: 50px;
             }
         }
 
